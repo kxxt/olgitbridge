@@ -1,3 +1,14 @@
+0.9.17-overleaf-5 / 2022-10-26
+==============================
+
+* Overleaf: remove export of builder.js.
+
+0.9.17-overleaf-4 / 2022-10-21
+==============================
+
+* Overleaf: no code changes in dist library, npm audit fixes
+    and fix to builder.js.
+
 0.9.17-overleaf-3 / 2020-08-13
 ==============================
 
