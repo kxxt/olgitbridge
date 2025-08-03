@@ -1,3 +1,5 @@
+const { JSDOM } = require('jsdom')
+
 /*
 | Performs a login.
 |
@@ -11,10 +13,10 @@ module.exports =
 {
 	const res = await client.get( olServer + '/login' );
 	const data = res.data;
-	const regexCSRF = /input name="_csrf" type="hidden" value="([^"]*)">/;
-	const csrf = data.match( regexCSRF )[ 1 ];
+	const dom = new JSDOM(data)
+	const csrfToken = dom.window.document.head.querySelector('meta[name="ol-csrfToken"]').content
 	await client.post(
 		olServer + '/login',
-		{ _csrf: csrf, email: email, password: password }
+		{ _csrf: csrfToken, email: email, password: password }
 	);
 };

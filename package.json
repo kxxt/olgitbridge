@@ -19,6 +19,7 @@
     "axios-cookiejar-support": "^2.0.3",
     "form-data": "^4.0.0",
     "git-http-backend": "^1.0.2",
+    "jsdom": "^26.1.0",
     "tough-cookie": "^4.0.0",
     "uglify-js": "^3.14.3",
     "unzipper": "^0.10.11",
