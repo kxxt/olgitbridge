@@ -7,5 +7,5 @@ RUN npm install
 RUN git config --global user.email "overleaf-git-bridge@system.changeme.invalid" && git config --global user.name "Overleaf Git Bridge"
 
 EXPOSE 5000
-ENTRYPOINT [ "node", "src/server.js" ]
+CMD [ "node", "src/server.js" ]
 
