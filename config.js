@@ -4,12 +4,11 @@
 const config = module.exports = { forward: { }, ssl: { } };
 
 // overleaf server
-config.olServer = 'http://localhost';
+config.olServer = process.env.GIT_BRIDGE_OAUTH2_SERVER || "http://sharelatex";
 
 // used if all the working directories in one place
 // must be absolute path ending with '/'
-config.baseDir = '/var/olgitbridge/';
-
+config.baseDir = '/data/git-bridge';
 // blueprint of the overleaf version (only differences to git to be uploaded again)
 config.bluesDir = config.baseDir + 'blues/';
 
